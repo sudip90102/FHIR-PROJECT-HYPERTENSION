@@ -1,0 +1,73 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "MedicationRequest-HypertensionProfile",
+  "url": "http://example.org/fhir/StructureDefinition/MedicationRequest-HypertensionProfile",
+  "name": "MedicationRequestHypertensionProfile",
+  "title": "Medication Request for Hypertension Profile",
+  "status": "draft",
+  "date": "2025-05-22",
+  "publisher": "Kathmandu University",
+  "description": "StructureDefinition for MedicationRequest tailored to hypertension treatment.",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "MedicationRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationRequest",
+        "path": "MedicationRequest"
+      },
+      {
+        "id": "MedicationRequest.status",
+        "path": "MedicationRequest.status",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "MedicationRequest.intent",
+        "path": "MedicationRequest.intent",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "MedicationRequest.medicationCodeableConcept",
+        "path": "MedicationRequest.medicationCodeableConcept",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "MedicationRequest.subject",
+        "path": "MedicationRequest.subject",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "MedicationRequest.authoredOn",
+        "path": "MedicationRequest.authoredOn",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction",
+        "path": "MedicationRequest.dosageInstruction",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing",
+        "path": "MedicationRequest.dosageInstruction.timing",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.route",
+        "path": "MedicationRequest.dosageInstruction.route",
+        "min": 0,
+        "max": "1"
+      }
+    ]
+  }
+}
